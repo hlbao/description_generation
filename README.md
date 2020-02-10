@@ -5,4 +5,4 @@
 
 3. This repository includes two parts, the first is a Wikipedia crawler, mainly through BeautifulSoup (aka bs4 to extract information) and requests library. The second one is mining and pre-processing documents. The output is wikiextractor/extracted/originaltext.
 
-4. Next two parts are 1. put processed data into structured machine learning to classfy/clean; 2. put classified data to evolutionary algorithm program to generate text, we will updata as the processing of the project.
+4. Next two parts are 1. put processed data into structured machine learning to classify/clean; 2. put classified data to evolutionary algorithm program to generate text, we will updata as the processing of the project.
