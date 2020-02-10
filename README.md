@@ -1,0 +1,2 @@
+# DataReader
+Data Reader is a program that reads data items from a files (here linguistic corpora) into your machine learning program, and creates training/testing examples. This part of the project is just to make sure that you find your actual data and have a program that can interact with your data: Read the data from a folders/files and have your data items in the form of learning examples. Depending on how clean/structured is your data this step might need a bit of work for you.
