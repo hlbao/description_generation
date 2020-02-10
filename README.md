@@ -3,7 +3,7 @@
 
 2. Notice in this data-reader repository, we just focus on the reading+mining of data from wiki. It definitely needs more efforts to do cleaning or structured operations. So far we have not implemented that, but we will work on this during the entire cycle of this project.
 
-3. This repository included two parts, the first is a Wikipedia crawler. The output should be 
+3. This repository included two parts, the first is a Wikipedia crawler. The output should be named with 'wikiextractor/extracted/originaltext', and stored within the same root-folder. 
 
 Honglin Bao and Jiaoping Chen
 baohongl@msu.edu
