@@ -3,5 +3,6 @@
 
 2. Notice in this data-reader repository, we just focus on the reading+mining of data from wiki. It definitely needs more efforts to do cleaning or structured operations. So far we have not implemented that, but we will work on this during the entire cycle of this project.
 
-3. This repository includes two parts, the first is a Wikipedia crawler, mainly through BeautifulSoup (aka bs4 to extract information) and requests library. The second one is mining and pre-processing documents. The output should be named with 'wikiextractor/extracted/originaltext', and stored within the same root-folder. 
+3. This repository includes two parts, the first is a Wikipedia crawler, mainly through BeautifulSoup (aka bs4 to extract information) and requests library. The second one is mining and pre-processing documents. The output is wikiextractor/extracted/originaltext.
 
+4. Next two parts are 1. put processed data into structured machine learning to clean; 2. put cleaned data to evolutionary algorithm program to generate text, we will updata as the processing of the project.
