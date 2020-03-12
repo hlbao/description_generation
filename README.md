@@ -19,6 +19,8 @@ For the 2nd update of project:
 
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
+$ python -m spacy download es_core_news_md
+
 2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
 
 2.2
