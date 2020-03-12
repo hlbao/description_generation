@@ -12,8 +12,12 @@
 
 1.5. Data Reader: constants.py, mine.py, wikiextractor.py. Mined data see mined.zip
 
+For the 2nd uodate of project:
+
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
-2.1
+2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
+
+--------------------3_MachineLearning-----------------------------------------------------------------------------------------
 
 
