@@ -12,7 +12,10 @@
 
 1.5. Data Reader: constants.py, mine.py, wikiextractor.py. Mined data see mined.zip
 
-For the 2nd uodate of project:
+
+
+
+For the 2nd update of project:
 
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
