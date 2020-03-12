@@ -1,0 +1,18 @@
+Now that you have your data reader in place, it is the time to use a machine learning algorithm on the data and evaluate its performance, we need you to have a naive initial working model. Also, please write up the following information: 
+
+What is the setting of your project? is it supervised, unsupervised or semisupervised? (I think everybody got supervision for this class though). 
+
+How you represent X (Features and their explanation, justification)
+How you represent Y (binary? multi-class? regression? structured model such as a sequences? graphs?)
+
+Do you plan to use a kind of inference in your model? what kind of approach for inference you plan to use? 
+
+Note that, all this information will be a part of your final project report.
+
+ --You might use ML/Deep ML/Graphical models/probabilistic logic models such as MLNs etc tools for your project or use your own implemented algorithm, in any case, you will need to do the following:
+
+1. Make a test/train split of the data
+2. Use your machine learning algorithm to learn from your training set
+3. Evaluate the model with the test set.
+4. Send a report summary about the model's performance on train and test datasets.
+5. Push your code to your repository on GitHub, and post a link to it here in response to this assignment.
