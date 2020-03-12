@@ -10,7 +10,7 @@
 
 1.4. Next two parts are 1. put processed data into structured machine learning to classify/clean; 2. put classified data to evolutionary algorithm program to generate text, we will updata as the processing of the project.
 
-1.5. Data Reader: constants.py, mine.py, wikiextractor.py. Mined data see mined.zip
+1.5. Data Reader: mine.py, wikiextractor.py. Mined data see mined.zip
 
 
 
@@ -20,6 +20,8 @@ For the 2nd update of project:
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
 2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
+
+2.2
 
 --------------------3_MachineLearning-----------------------------------------------------------------------------------------
 
