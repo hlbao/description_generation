@@ -147,7 +147,3 @@ nlp = spacy.load('es_core_news_md')
 from clean import clean_line
 clean_line(nlp, 'Notaremos como formula_194 el conjunto resultante de todas las combinaciones lineales de los vectores de formula_195.')
 """
-
-"""
-'notaremos como FORM el conjunto resultante de todas las combinaciones lineales de los vectores de FORM'
-"""
