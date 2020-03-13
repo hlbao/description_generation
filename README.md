@@ -1,4 +1,4 @@
-# TextGeneration
+# StoryGeneration
 
 ------------------1_DateReader------------------------------------------------------------------------------------------------
 
@@ -19,11 +19,36 @@ For the 2nd update of project:
 
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
-$ python -m spacy download es_core_news_md
-
 2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
 
-2.2
+2.2 package: (https://spacy.io/)
+  $ python -m spacy download es_core_news_md
+  - Installing pyasn1 (0.4.8)
+  - Installing cachetools (4.0.0)
+  - Installing oauthlib (3.1.0)
+  - Installing pyasn1-modules (0.2.8)
+  - Installing rsa (4.0)
+  - Installing google-auth (1.11.2)
+  - Installing requests-oauthlib (1.3.0)
+  - Installing absl-py (0.9.0)
+  - Installing google-auth-oauthlib (0.4.1)
+  - Installing grpcio (1.27.2)
+  - Installing h5py (2.10.0)
+  - Installing markdown (3.2.1)
+  - Installing protobuf (3.11.3)
+  - Installing werkzeug (1.0.0)
+  - Installing wheel (0.34.2)
+  - Installing astor (0.8.1)
+  - Installing gast (0.2.2)
+  - Installing google-pasta (0.1.8)
+  - Installing keras-applications (1.0.8)
+  - Installing keras-preprocessing (1.1.0)
+  - Installing opt-einsum (3.2.0)
+  - Installing tensorboard (2.1.1)
+  - Installing tensorflow-estimator (2.2.0rc0)
+  - Installing termcolor (1.1.0)
+  - Installing wrapt (1.12.1)
+  - Installing tensorflow (2.1.0)
 
 --------------------3_MachineLearning-----------------------------------------------------------------------------------------
 
