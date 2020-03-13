@@ -18,6 +18,61 @@ def clean(in_path, out_path, nlp):
 		write_out(lines, out_path, file)
 
 
+def roman_numbers(line):
+	logging.debug(line)
+	m = R_CENT_ROMAN.search(line)
+	while m:
+		replacement = m.group(0)
+		logging.debug('roman number found - {}'.format(replacement))
+		line = line.replace(replacement, R_ROMAN.sub(NUM_TOKEN, replacement), 1)
+		m = R_CENT_ROMAN.search(line)
+	return line
+
+
+def write_out(lines, path, file):
+	"""Write lines in file located at path."""
+	logging.debug('IN')
+	with open(path+file, 'w') as output_file:
+		logging.info('Writing {} lines in {}{}'.format(len(lines), path, file))
+		for line in lines: # just in case
+			output_file.write(line+'\n')
+
+def formulas(line):
+	logging.debug(line)
+	return R_FORMULA.sub(FORMULA_TOKEN, line)
+
+def decimal_numbers(line):
+	"""Finds and replaces decimal numbers for unique token."""
+	logging.debug(line)
+	return R_NUM.sub(NUM_TOKEN, line)
+
+def surrounded(line):
+	"""Finds and removes <tags>."""
+	logging.debug(line)
+	line = R_TAG.sub('', line)
+	line = R_PARENTHESIS.sub('', line)
+	return line
+
+
+def entities(nlp, line):
+	logging.debug(line)
+	for ent in nlp(line).ents:
+		logging.debug('Found entity "{}", {}'.format(ent.text, ent.label_))
+		line = line.replace(ent.text, ent.label_)
+	return line
+
+
+def to_lower(line):
+	"""Gets everything lower."""
+	logging.debug(line)
+	return ' '.join([w if w in TOKENS else w.lower() for w in line.split()])
+
+def separate_tokens(line):
+	logging.debug(line)
+	for TOKEN in TOKENS:
+		line = line.replace(TOKEN, ' {} '.format(TOKEN))
+	return line
+
 def read_in(path, file, nlp):
 	"""Reads lines in files located in path and sends them to be cleaned."""
 	logging.debug('IN')
@@ -33,79 +88,7 @@ def read_in(path, file, nlp):
 			raw_line = inputfile.readline()
 	return lines
 
-
-def write_out(lines, path, file):
-	"""Write lines in file located at path."""
-	logging.debug('IN')
-	with open(path+file, 'w') as output_file:
-		logging.info('Writing {} lines in {}{}'.format(len(lines), path, file))
-		for line in lines: # just in case
-			output_file.write(line+'\n')
-
-
-def decimal_numbers(line):
-	"""Finds and replaces decimal numbers for unique token."""
-	logging.debug(line)
-	return R_NUM.sub(NUM_TOKEN, line)
-
-
-def roman_numbers(line):
-	"""Finds and replaces roman numbers when referred to centuries (spanish) for unique token."""
-	logging.debug(line)
-	m = R_CENT_ROMAN.search(line)
-	while m:
-		replacement = m.group(0)
-		logging.debug('roman number found - {}'.format(replacement))
-		line = line.replace(replacement, R_ROMAN.sub(NUM_TOKEN, replacement), 1)
-		m = R_CENT_ROMAN.search(line)
-	return line
-
-
-def formulas(line):
-	"""Finds and replaces formulas references for unique token (E.g. formula_1)."""
-	logging.debug(line)
-	return R_FORMULA.sub(FORMULA_TOKEN, line)
-
-
-def surrounded(line):
-	"""Finds and removes <tags> and (parenthesis)."""
-	logging.debug(line)
-	line = R_TAG.sub('', line)
-	line = R_PARENTHESIS.sub('', line)
-	return line
-
-
-def entities(nlp, line):
-	"""Finds and replaces entities for unique token."""
-	logging.debug(line)
-	for ent in nlp(line).ents:
-		logging.debug('Found entity "{}", {}'.format(ent.text, ent.label_))
-		line = line.replace(ent.text, ent.label_)
-	return line
-
-
-def separate_tokens(line):
-	"""Put white spaces in both sides of a token."""
-	logging.debug(line)
-	for TOKEN in TOKENS:
-		line = line.replace(TOKEN, ' {} '.format(TOKEN))
-	return line
-
-
-def to_lower(line):
-	"""Gets everything lower except the tokens."""
-	logging.debug(line)
-	return ' '.join([w if w in TOKENS else w.lower() for w in line.split()])
-
-
-def alphanumeric(line):
-	"""Replaces special characters for white spaces."""
-	logging.debug(line)
-	return ''.join(e if e.isalnum() else ' ' for e in line)
-
-
 def keep(line):
-	"""Decides if line goes ahead after cleaned."""
 	logging.debug(line)
 	word_list = line.split()
 	n_words = len(word_list)
@@ -116,9 +99,14 @@ def keep(line):
 	# excesive number of tokens
 	return n_tokens/(n_words-1)<=TOKEN_THROW_RATIO
 
+def alphanumeric(line):
+	"""Replaces special characters with white spaces."""
+	logging.debug(line)
+	return ''.join(e if e.isalnum() else ' ' for e in line)
+
+
 
 def clean_line(nlp, line):
-	"""Cleaning pipeline."""
 	logging.debug('Cleaning \"{}\"'.format(line))
 	line = surrounded(line)
 	line = entities(nlp, line)
@@ -136,8 +124,8 @@ if __name__ == '__main__':
 	logging.basicConfig(format=LOG_FORMAT, level=logging.INFO)
 	#logging.info('Loading model - {}'.format(ES_MODEL))
 	#nlp = spacy.load(ES_MODEL)
-  logging.info('Loading model - {}'.format(EN_MODEL))
-	nlp = spacy.load(EN_MODEL)
+  #logging.info('Loading model - {}'.format(EN_MODEL))
+	#nlp = spacy.load(EN_MODEL)
 	clean(MINED_FOLDER, CLEANED_FOLDER, nlp)
 
 
