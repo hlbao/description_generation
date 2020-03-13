@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 24 12:18:37 2020
+@author: Honglin Bao
+Department of Computer Science and Engineering
+NSF BEACON Center for the Study of Evolution in Action
+Michigan State University, East Lansing, MI, USA 48824
+BAOHONGL@MSU.EDU
+https://web.cse.msu.edu/person/3
+"""
+
 import os
 import logging
 
