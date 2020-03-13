@@ -6,7 +6,7 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfTransformer
 
-f= open("clean.txt", "r")
+f= open("cleaned.txt", "r")
 if f.mode == 'r':
    df =f.read()
 
@@ -29,6 +29,8 @@ x_train_tfidf = tfidf_transformer.fit_transform(x_train_counts)
 train_x, test_x, train_y, test_y = train_test_split(x_train_tfidf, varietal_list, test_size=0.3)
 
 clf = MultinomialNB().fit(train_x, train_y)
+# clf = SVC(kernel='linear').fit(train_x, train_y)
+
 y_score = clf.predict(test_x)
 
 n_right = 0
