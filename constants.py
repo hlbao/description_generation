@@ -22,7 +22,7 @@ R_FORMULA = re.compile(r'formula_([0-9])+')
 # Spanish multi-task CNN trained on the AnCora and WikiNER corpus. Assigns context-specific token vectors, POS tags, dependency parse and named entities. Supports identification of PER, LOC, ORG and MISC entities.
 
 
-#ES_MODEL = 'en_core_web_md'
+#EN_MODEL = 'en_core_web_md'
 
 
 ENTS = ('PER', 'LOC', 'ORG', 'MISC')
