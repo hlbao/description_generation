@@ -59,6 +59,8 @@ For the 2nd update of project:
 
 3.2 We make a test/train split of the data (test 30%, train 70%). Accuracy 73.56%.
 
-3.3 We thought we could do a more fancy machine learning based classification. However, i did not expect that data cleaning spent me lots of time. So in this version, just a simple classification, we should improeve it in the future (e.g. make it deep), and then apply it into evolutionary search system for story generation.
+3.3 We thought we could do a more fancy machine learning based classification. However, i did not expect that data cleaning spent me lots of time. So in this version, just a simple classification, we should improeve it in the future (e.g. make it deep), and then put it into evolutionary search system for story generation.
+
+After data reader, for the second update of project see 2 and 3.
 
 
