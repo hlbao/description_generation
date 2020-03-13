@@ -22,7 +22,8 @@ For the 2nd update of project:
 2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
 
 2.2 package: (https://spacy.io/)
-  $ python -m spacy download es_core_news_md
+
+  - $ python -m spacy download es_core_news_md
   - Installing pyasn1 (0.4.8)
   - Installing cachetools (4.0.0)
   - Installing oauthlib (3.1.0)
