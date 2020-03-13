@@ -19,7 +19,7 @@ For the 2nd update of project:
 
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
-2.1 "constants" focus on special chars in raw mined data which is accessed by DataReader.
+2.1 "constants" focuses on special chars in raw mined data which is accessed by DataReader. Spacy pacjage can choose different language, which we will consider in the future.
 
 2.2 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
 
