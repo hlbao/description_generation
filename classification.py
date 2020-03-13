@@ -6,10 +6,12 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfTransformer
 
-f= open("cleaned.txt", "r")
-if f.mode == 'r':
-   df =f.read()
+＃f= open("cleaned.txt", "r")
+＃if f.mode == 'r':
+＃   df =f.read()
 
+
+df = pd.read_csv('data/cleaned.csv')
 
 counter = Counter(df['variety'].tolist())
 top_10_varieties = {i[0]: idx for idx, i in enumerate(counter.most_common(10))}
