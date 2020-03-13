@@ -6,9 +6,9 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfTransformer
 
-＃f= open("cleaned.txt", "r")
-＃if f.mode == 'r':
-＃   df =f.read()
+# f= open("cleaned.txt", "r")
+#if f.mode == 'r':
+#  df =f.read()
 
 
 df = pd.read_csv('data/cleaned.csv')
@@ -34,6 +34,9 @@ clf = MultinomialNB().fit(train_x, train_y)
 # clf = SVC(kernel='linear').fit(train_x, train_y)
 
 y_score = clf.predict(test_x)
+
+
+
 
 n_right = 0
 for i in range(len(y_score)):
