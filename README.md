@@ -1,4 +1,4 @@
-# StoryGeneration
+# Description_Generation
 
 ------------------1_DateReader------------------------------------------------------------------------------------------------
 
@@ -19,9 +19,11 @@ For the 2nd update of project:
 
 --------------2_MinedDataClean------------------------------------------------------------------------------------------------
 
-2.1 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
+2.1 "constants" focus on special chars in raw mined data which is accessed by DataReader.
 
-2.2 package: (https://spacy.io/)
+2.2 Cleaning of mined data see clean.py. Cleaned data set see cleaned.zip
+
+2.3 package: (https://spacy.io/)
 
   - $ python -m spacy download es_core_news_md
   - Installing pyasn1 (0.4.8)
