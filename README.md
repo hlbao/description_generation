@@ -55,4 +55,10 @@ For the 2nd update of project:
 
 --------------------3_MachineLearning-----------------------------------------------------------------------------------------
 
+3.1 For the machine learning part, right now we apply some simple classification (supervised learning) algorithms, for example, naive Bayes and SVM. Vector is being used to represent all elements. We also applied tf-idf. Also, so far no plans for inference, we mainly intend to apply evolutionary search for story generation. I submitted this plan and got approved.
+
+3.2 We make a test/train split of the data (test 30%, train 70%). Accuracy 73.56%.
+
+3.3 We thought we could do a more fancy machine learning based classification. However, i did not expect that data cleaning spent me lots of time. So in this version, just a simple classification, we should improeve it in the future (e.g. make it deep), and then apply it into evolutionary search system for story generation.
+
 
