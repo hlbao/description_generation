@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 20 12:26:54 2020
+Created on Fri Feb 21 10:17:43 2020
 @author: Honglin Bao
 Department of Computer Science and Engineering
 NSF BEACON Center for the Study of Evolution in Action
@@ -45,3 +45,5 @@ TOKEN_THROW_RATIO = 0.5
 LOG_FORMAT = '%(levelname)s (%(asctime)-15s) for %(funcName)s: %(message)s'
 MINED_FOLDER = 'mined/'
 CLEANED_FOLDER = 'cleaned/'#see documents in github
+
+
