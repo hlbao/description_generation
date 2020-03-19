@@ -63,6 +63,8 @@ For the 2nd update of project:
 
 After data reader, for the second update of project see 2 and 3.
 
--------4_Polished_Claasification_and_Evolutionary_Search----------------------------------------------------------------------
+-------4_Polished_Classification_and_Evolutionary_Search----------------------------------------------------------------------
+
+4.1 The third update aims to polish previous naive classification and introduce evolutionary search, which is my specialization, for description generation.
 
 
