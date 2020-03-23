@@ -34,9 +34,9 @@ git clone https://github.com/attardi/wikiextractor.git
 
 cd wikiextractor
 
-# python setup.py install
+python setup.py install 
 
-# eswiki, enwiki, itwiki, etc
+eswiki, enwiki, itwiki, etc
 
 wget http://download.wikimedia.org/eswiki/latest/eswiki-latest-pages-articles.xml.bz2
 
