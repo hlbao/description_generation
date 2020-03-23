@@ -10,8 +10,6 @@ This repository includes two parts, the first is a Wikipedia crawler, mainly thr
 
 Next two parts are 1. put processed data into structured machine learning to classify/clean; 2. put classified data to evolutionary algorithm program to generate text, we will updata as the processing of the project.
 
-----------Update2_Date_Clean--------------------------------------------------------------------------------------------------
-
 Set Up environment
 
 cd descriptiongeneration/text
@@ -28,19 +26,11 @@ Inside text folder
 
 cd usr/src/text
 
-1. Download Wikipedia data with WikiExtractor
-
-git clone https://github.com/attardi/wikiextractor.git
-
-cd wikiextractor
-
-python setup.py install 
-
-eswiki, enwiki, itwiki, etc
+notice wikiextractor can also used through https://github.com/attardi/wikiextractor.git and 
 
 wget http://download.wikimedia.org/eswiki/latest/eswiki-latest-pages-articles.xml.bz2
 
-python WikiExtractor.py -cb 250K -o extracted eswiki-latest-pages-articles.xml.bz2
+----------Update2_Date_Clean--------------------------------------------------------------------------------------------------
 
 2. Mine sentences from extracted Data
 
