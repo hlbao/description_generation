@@ -42,6 +42,8 @@ For the second update, see clean.py, cleaned.zip (cleaned data), contants.py (ai
 
 documentcovert.py is just a small programe for converting text to csv.
 
-Using a package 'Spacy Model: https://spacy.io/' it provides different language which has not been decided. $pip install -U spacy
+Using a package 'Spacy Model: https://spacy.io/' it provides different language which has not been decided. 
 
------------Update3_Evolutionary_Search----------------------------------------------------------------------------------------
+$pip install -U spacy
+
+-----------Update2_Basic_Classificaition--------------------------------------------------------------------------------------
