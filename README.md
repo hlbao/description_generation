@@ -34,10 +34,6 @@ The first update see wikiextractor.py, mine.py (mining sentences from extracted 
 
 ----------Update2_Date_Clean--------------------------------------------------------------------------------------------------
 
-Clean sentences from mined Data
-
-python clean.py
-
 TODO:
 
 Refactor mine.py, clean.py
