@@ -30,6 +30,8 @@ notice wikiextractor can also used through https://github.com/attardi/wikiextrac
 
 wget http://download.wikimedia.org/eswiki/latest/eswiki-latest-pages-articles.xml.bz2
 
+The first update see wikiextractor.py, mine.py, and mine.zip (raw data).
+
 ----------Update2_Date_Clean--------------------------------------------------------------------------------------------------
 
 2. Mine sentences from extracted Data
