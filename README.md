@@ -30,20 +30,18 @@ notice wikiextractor can also used through https://github.com/attardi/wikiextrac
 
 wget http://download.wikimedia.org/eswiki/latest/eswiki-latest-pages-articles.xml.bz2
 
-The first update see wikiextractor.py, mine.py, and mine.zip (raw data).
+The first update see wikiextractor.py, mine.py (mining sentences from extracted wiki data), and mined.zip (mined data).
 
 ----------Update2_Date_Clean--------------------------------------------------------------------------------------------------
 
-2. Mine sentences from extracted Data
-
-python mine.py
-
-3. Clean sentences from mined Data
+Clean sentences from mined Data
 
 python clean.py
 
 TODO:
 
 Refactor mine.py, clean.py
+
+For the second update, see 
 
 -----------Update3_Evolutionary_Search----------------------------------------------------------------------------------------
