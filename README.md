@@ -47,3 +47,5 @@ Using a package 'Spacy Model: https://spacy.io/' it provides different language 
 $pip install -U spacy
 
 -----------Update2_Basic_Classificaition--------------------------------------------------------------------------------------
+
+Using vector to represent everything. Split: Test set (30%), Training set (70%). Accuracy: 71.54%
