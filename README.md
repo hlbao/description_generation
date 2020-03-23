@@ -42,6 +42,8 @@ TODO:
 
 Refactor mine.py, clean.py
 
-For the second update, see 
+For the second update, see clean.py, cleaned.zip (cleaned data), contants.py (aiming to remove special char).
+
+documentcovert.py is just a small programe for converting text to cvs.
 
 -----------Update3_Evolutionary_Search----------------------------------------------------------------------------------------
