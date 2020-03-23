@@ -48,4 +48,6 @@ $pip install -U spacy
 
 -----------Update2_Basic_Classificaition--------------------------------------------------------------------------------------
 
-Using vector to represent everything. Split: Test set (30%), Training set (70%). Accuracy: 71.54%
+Previously using vector to represent everything. Idea is using TF-IDF to exract key words. Split: Test set (30%), Training set (70%). Accuracy: 71.54%, however, I noticed this is wrong.
+
+
