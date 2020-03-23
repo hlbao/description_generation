@@ -50,4 +50,6 @@ $pip install -U spacy
 
 Previously using vector to represent everything. Idea is using TF-IDF to exract key words. Split: Test set (30%), Training set (70%). Accuracy: 71.54%, however, I noticed this is wrong.
 
+Current version of classification mainly refer: https://machinelearningmastery.com/how-to-develop-a-word-level-neural-language-model-in-keras/
+
 
