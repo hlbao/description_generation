@@ -31,3 +31,5 @@ model = load_model('model.h5')
 # load the tokenizer
 tokenizer = load(open('tokenizer.pkl', 'rb'))
 
+# evolutionary search through deap, not finished
+
