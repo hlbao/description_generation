@@ -1,4 +1,5 @@
 import string
+from clean import get_lines, get_tokenizer, p_distribution, ordereddict_to_list
  
 # load doc into memory
 def load_doc(filename):
