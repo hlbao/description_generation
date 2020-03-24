@@ -1,7 +1,7 @@
 import string
-from clean import clean_line, alphanumeric, keep, separate_tokens, to_lower, entities, surrounded, decimal_numbers
+#from clean import clean_line, alphanumeric, keep, separate_tokens, to_lower, entities, surrounded, decimal_numbers
 
-from clean import formulas, roman_numbers, write_out, roman_numbers, clean, read_in
+#from clean import formulas, roman_numbers, write_out, roman_numbers, clean, read_in
  
 # load doc into memory
 def load_doc(filename):
@@ -13,19 +13,9 @@ def load_doc(filename):
 	file.close()
 	return text
  
-# turn a doc into clean tokens
-def clean_doc(doc):
-	# replace '--' with a space ' '
-	doc = doc.replace('--', ' ')
-	# split into tokens by white space
+# turn a doc into tokens
+def get_doc(doc):
 	tokens = doc.split()
-	# remove punctuation from each token
-	table = str.maketrans('', '', string.punctuation)
-	tokens = [w.translate(table) for w in tokens]
-	# remove remaining tokens that are not alphabetic
-	tokens = [word for word in tokens if word.isalpha()]
-	# make lower case
-	tokens = [word.lower() for word in tokens]
 	return tokens
  
 # save tokens to file, one dialog per line
@@ -41,7 +31,7 @@ doc = load_doc(in_filename)
 print(doc[:200])
  
 # clean document
-tokens = clean_doc(doc)
+tokens = get_doc(doc)
 print(tokens[:200])
 print('Total Tokens: %d' % len(tokens))
 print('Unique Tokens: %d' % len(set(tokens)))
