@@ -20,7 +20,7 @@ def load_doc(filename):
 
 
 # load cleaned text sequences
-in_filename = 'claened.txt'
+in_filename = 'cleaned.txt'
 doc = load_doc(in_filename)
 lines = doc.split('\n')
 seq_length = len(lines[0].split()) - 1
