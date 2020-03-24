@@ -1,7 +1,7 @@
 import string
 from clean import clean_line, alphanumeric, keep, separate_tokens, to_lower, entities, surrounded, decimal_numbers
 
-from clean import formulas, write_numbers, write_out, roman_numbers, clean, read_in
+from clean import formulas, roman_numbers, write_out, roman_numbers, clean, read_in
  
 # load doc into memory
 def load_doc(filename):
