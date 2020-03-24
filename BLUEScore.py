@@ -1,5 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+#refer: http://www.nltk.org/_modules/nltk/translate/bleu_score.html
+
+#Command
+#python calculate_bleu_score.py candidate.txt reference.txt 
+
+#candidate.txt is the generated text file.
+#reference.txt is the reference text. Mostly the human written text file.
+
+reference.txt is the reference text. Mostly the human translated text file.
 import sys
 import os
 import io
