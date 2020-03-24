@@ -56,5 +56,5 @@ for i in range(length, len(tokens)):
 print('Total Sequences: %d' % len(sequences))
  
 # save sequences to file
-out_filename = 'republic_sequences.txt'
+out_filename = 'cleaned.txt'
 save_doc(sequences, out_filename)
