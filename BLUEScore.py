@@ -9,7 +9,6 @@
 #candidate.txt is the generated text file.
 #reference.txt is the reference text. Mostly the human written text file.
 
-reference.txt is the reference text. Mostly the human translated text file.
 import sys
 import os
 import io
