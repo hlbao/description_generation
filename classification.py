@@ -27,7 +27,17 @@ in_filename = 'cleaned.txt'
 doc = load_doc(in_filename)
 lines = doc.split('\n')
  
-# integer encode sequences of words
+
+# The word embedding layer expects input sequences to be comprised of integers.
+#We can map each word in our vocabulary to a unique integer and encode our input sequences. 
+#Later, when we make predictions, 
+#we can convert the prediction to numbers and look up their associated words in the same mapping.
+#To do this encoding, we will use the Tokenizer class in the Keras API.
+#First, the Tokenizer must be trained on the entire training dataset, 
+#which means it finds all of the unique words in the data and assigns each a unique integer.
+#We can then use the fit Tokenizer to encode all of the training sequences, 
+#converting each sequence from a list of words to a list of integers.
+
 tokenizer = Tokenizer()
 tokenizer.fit_on_texts(lines)
 sequences = tokenizer.texts_to_sequences(lines)
