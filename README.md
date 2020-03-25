@@ -52,4 +52,6 @@ Previously using vector to represent everything. Idea is using TF-IDF to exract 
 
 Current version of classification mainly refer: https://machinelearningmastery.com/how-to-develop-a-word-level-neural-language-model-in-keras/
 
+Another data set we want to use: https://www.gutenberg.org/ebooks/1497
+
 
