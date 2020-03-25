@@ -79,7 +79,7 @@ seq_length = X.shape[1]
 #and this is the suitable loss function for this type of problem. 
 #The efficient Adam implementation to mini-batch gradient descent is used and accuracy is evaluated of the model.
 #the model is fit on the data for 100 training epochs with a modest batch size of 128 to speed things up. 
-#Accuracy right now is only around 51%.
+
 
 
 model = Sequential()
