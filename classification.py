@@ -1,3 +1,8 @@
+#we will use an Embedding Layer to learn the distributed representation of words 
+# which aims to achieve that different words with similar meanings will have a similar representation, 
+#and a Long Short-Term Memory (LSTM) recurrent neural network to learn to predict words based on their context.
+
+
 from numpy import array
 from pickle import dump
 from keras.preprocessing.text import Tokenizer
