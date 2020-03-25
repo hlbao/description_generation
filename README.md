@@ -1,5 +1,25 @@
 # description_generation
 
+general description:
+
+What is text generation, in terms of Artificial Intelligence?
+
+The creation of grammatically correct text in the same domain of the original globally, but with different meaning or content to each of the texts individually. In this context the domain is the set of semantic field, form of writing, length of texts, etc.
+
+Mining
+
+Data mining will represent the automation part. The goal would be to obtain a considerable amount (on the order of hundreds of thousands) of text samples. Each text, to facilitate the preparation of the pilot test, will consist of simple sentences. These phrases in turn will go through a process of filtering, cleaning and simplification.
+
+Learning
+
+Train a model whose input is n words where n is the expected word, or expected output. It, in other words, must learn which is the next most likely word given a sequence of words. So we apply classification and n-gram model 
+
+Search
+
+Finally, we are faced with the concept of optimization. We will have to implement a search algorithm which selects and properly orders words from the generated vocabulary in order to achieve coherent and coherent sentences.
+so, we use evolutionary search for generation (so far have not finished). Choose a path by browsing the words in the dictionary until you find a phrase. This means that, given a word, just an example, the three most probable words are selected to be the second word (9 different possibilities in the second step). This continues until we find the reserved word in our vocabulary that leads to the end of the sequence or phrase (EOL, from the English End Of Line).
+
+
 ------Update1_DateReader------------------------------------------------------------------------------------------------------
 
 Data Reader is a program that reads data items from a files (here linguistic corpora, perticularly wikipedia extractor sets) into machine learning + evolutionary computation program, and creates training/testing examples. This part of the project is just to make sure that you find your actual data and have a program that can interact with your data: Read the data from a folders/files and have your data items in the form of learning examples. Depending on how clean/structured is your data this step might need a bit of work for you.
