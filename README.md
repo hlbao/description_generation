@@ -16,7 +16,7 @@ Train a model whose input is n words where n is the expected word, or expected o
 With enough time and resources, we could explore the ability of the model to learn with differently sized input sequences. But for now, we will pick a length of 50 words for the length of the input sequences, somewhat arbitrarily. Details see classification.py
 
 
-Search
+Search (Not completed)
 
 Finally, we are faced with the concept of optimization. We will have to implement a search algorithm which selects and properly orders words from the generated vocabulary in order to achieve coherent and coherent sentences.
 so, we use evolutionary search for generation (so far have not finished). Choose a path by browsing the words in the dictionary until you find a phrase. This means that, given a word, just an example, the three most probable words are selected to be the second word (9 different possibilities in the second step). This continues until we find the reserved word in our vocabulary that leads to the end of the sequence or phrase (EOL, from the English End Of Line).
