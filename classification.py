@@ -74,6 +74,14 @@ seq_length = X.shape[1]
 #we also need to specify to the Embedding layer how long input sequences are.
 #We already know that there are 50 words because we designed the model, 
 
+#We can now define and fit our language model on the training data.
+#The learned embedding needs to know the size of the vocabulary and the length of input sequences as previously discussed. 
+#It also has a parameter to specify how many dimensions will be used to represent each word. 
+#That is, the size of the embedding vector space.
+#Common values are 50, 100, and 300. We will use 50 here, but consider testing smaller or larger values.
+We will use a two LSTM hidden layers with 100 memory cells each. More memory cells and a deeper network may achieve better results.
+A dense fully connected layer with 100 neurons connects to the LSTM hidden layers to interpret the features extracted from the sequence. The output layer predicts the next word as a single vector the size of the vocabulary with a probability for each word in the vocabulary. 
+A softmax activation function is used to ensure the outputs have the characteristics of normalized probabilities.
 #Next, the model is compiled specifying the categorical cross entropy loss needed to fit the model. 
 #Technically, the model is learning a multi-class classification 
 #and this is the suitable loss function for this type of problem. 
