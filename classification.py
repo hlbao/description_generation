@@ -63,6 +63,25 @@ y = to_categorical(y, num_classes=vocab_size)
 seq_length = X.shape[1]
  
 # define model
+#Now we need to separate input sequence into input (X) and output (y) elements.
+# We do this with array slicing.
+#After separating, we need to one hot encode the output word. 
+#This means converting it from an integer to a vector of 0 values, 
+#one for each word in the vocabulary, with a 1 to indicate the specific word at the index of the words integer value.
+#This is so that the model learns to predict the probability distribution for the next word 
+#and the ground truth from which to learn from is 0 for all words except the actual word that comes next.
+#Keras provides the to_categorical() that can be used to one hot encode the output words for each input-output sequence pair.
+#we also need to specify to the Embedding layer how long input sequences are.
+#We already know that there are 50 words because we designed the model, 
+
+#Next, the model is compiled specifying the categorical cross entropy loss needed to fit the model. 
+#Technically, the model is learning a multi-class classification 
+#and this is the suitable loss function for this type of problem. 
+#The efficient Adam implementation to mini-batch gradient descent is used and accuracy is evaluated of the model.
+#the model is fit on the data for 100 training epochs with a modest batch size of 128 to speed things up. 
+#Accuracy right now is only around 51%.
+
+
 model = Sequential()
 model.add(Embedding(vocab_size, 50, input_length=seq_length))
 model.add(LSTM(100, return_sequences=True))
