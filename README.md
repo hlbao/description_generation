@@ -12,7 +12,9 @@ Data mining will represent the automation part. The goal would be to obtain a co
 
 Learning
 
-Train a model whose input is n words where n is the expected word, or expected output. It, in other words, must learn which is the next most likely word given a sequence of words. So we apply classification and n-gram model 
+Train a model whose input is n words where n is the expected word, or expected output. It, in other words, must learn which is the next most likely word given a sequence of words. So we apply classification and n-gram model. A key design decision is how long the input sequences should be. They need to be long enough to allow the model to learn the context for the words to predict. This input length will also define the length of seed text used to generate new sequences when we use the model.
+With enough time and resources, we could explore the ability of the model to learn with differently sized input sequences. But for now, we will pick a length of 50 words for the length of the input sequences, somewhat arbitrarily. Details see classification.py
+
 
 Search
 
