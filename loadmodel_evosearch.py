@@ -1,4 +1,7 @@
 # evolutionary search through deap, not finished
+#We will select a random line of text from the input text for this purpose. 
+#The model can predict the next word directly by calling model.predict_classes() 
+#that will return the index of the word with the highest probability.
 
 from random import randint
 from pickle import load
