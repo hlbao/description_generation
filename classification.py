@@ -24,6 +24,7 @@ def load_doc(filename):
  
 # load
 in_filename = 'cleaned.txt'
+#can try another data set
 doc = load_doc(in_filename)
 lines = doc.split('\n')
  
@@ -37,6 +38,17 @@ lines = doc.split('\n')
 #which means it finds all of the unique words in the data and assigns each a unique integer.
 #We can then use the fit Tokenizer to encode all of the training sequences, 
 #converting each sequence from a list of words to a list of integers.
+#We can access the mapping of words to integers as a dictionary attribute called word_index on the Tokenizer object.
+#We need to know the size of the vocabulary for defining the embedding layer later. 
+#We can determine the vocabulary by calculating the size of the mapping dictionary.
+#Words are assigned values from 1 to the total number of words.
+#The Embedding layer needs to allocate a vector representation for each word in this vocabulary 
+#from index 1 to the largest index and because indexing of arrays is zero-offset, 
+#the index of the word at the end of the vocabulary will be (tokenizer.word_index); 
+#that means the array must be (tokenizer.word_index+1) in length.
+#Therefore, when specifying the vocabulary size to the Embedding layer, 
+#we specify it as 1 larger than the actual vocabulary.
+
 
 tokenizer = Tokenizer()
 tokenizer.fit_on_texts(lines)
