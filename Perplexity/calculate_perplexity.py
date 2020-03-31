@@ -64,13 +64,16 @@ def graph_draw(topic,perplexity):             #graph draw for topic and preplexi
 
 topic=[]
 perplexity_list=[]
-f1=open('/home/alber/lda/GibbsLDA/jd/test.txt','r')      #测试集目录
+f1=open('/users/pc/Desktop/description_generation/Perplexity/candidate.txt','r')      #test 
+# f1=open('/users/pc/Desktop/description_generation/Perplexity/candidate2.txt','r')      #test 
+
+
 testset=f1.read()
 testset_word_count=f_testset_word_count(testset)         #call the function to count the sum-words in testset
 for i in xrange(14):
     dictionary={}
-    topic.append(5*(3i+1))                                                       #模型文件名的迭代公式
-    trace="/home/alber/lda/GibbsLDA/jd/stats/model-final-"+str(5*(i+1))+".txt"   #模型目录
+    topic.append(5*(3i+1))  #confused, but works                                                      
+    trace="/home/alber/lda/GibbsLDA/jd/stats/model-final-"+str(5*(i+1))+".txt"   
     f=open(trace,'r')
     text=f.readlines()
     word_list=[]
