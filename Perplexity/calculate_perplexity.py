@@ -5,7 +5,7 @@ import string
 import matplotlib.pyplot as plt
 import re
 
-def dictionary_found(wordlist):               #for each word trined by model, we 
+def dictionary_found(wordlist):               #for each word trained by model, we 
   #make it "word as key, probability as value" dictionary
     word_dictionary1={}
     for i in xrange(len(wordlist)):
@@ -21,7 +21,7 @@ def dictionary_found(wordlist):               #for each word trined by model, we
     return word_dictionary1
 
 def look_into_dic(dictionary,testset):          #for each word in test set, find its probability in dictionary 
-    '''Calculates the TF-list for perplexity'''    
+    #'''Calculates the TF-list for perplexity'''    
     frequency=[]
     letter_list=[]
     a=0.0
@@ -40,16 +40,17 @@ def look_into_dic(dictionary,testset):          #for each word in test set, find
     return a
 
 
-def f_testset_word_count(testset):                                     #count word umber in test set
-    '''reture the sum of words in testset which is the denominator of the formula of Perplexity'''
+def f_testset_word_count(testset):                                     #count word number in test set
+    #'''reture the sum of words in testset which is the denominator of the formula of Perplexity'''
     testset_clean=testset.split()
     return (len(testset_clean)-testset.count("\n"))
 
 def f_perplexity(word_frequency,word_count):             #calculate preplexity 
-    '''Search the probability of each word in dictionary
-    Calculates the perplexity of the LDA model for every parameter T'''
+    #'''Search the probability of each word in dictionary
+   # Calculates the perplexity of the LDA model for every parameter T'''
     duishu=-math.log(word_frequency)
     kuohaoli=duishu/word_count
+ 
     perplexity=math.exp(kuohaoli)
     return perplexity
 
@@ -69,11 +70,11 @@ f1=open('/users/pc/Desktop/description_generation/Perplexity/candidate.txt','r')
 
 
 testset=f1.read()
-testset_word_count=f_testset_word_count(testset)         #call the function to count the sum-words in testset
+testset_word_count=50        
 for i in xrange(14):
     dictionary={}
-    topic.append(5*(3i+1))  #confused, but works                                                      
-    trace="/home/alber/lda/GibbsLDA/jd/stats/model-final-"+str(5*(i+1))+".txt"   
+    topic.append(5*(3i+1))  #confused, but works, since i learned some other codes, this line aims to count topic                                                  
+    trace="/users/pc/Desktop/description_generation/Perplexity/model-final-"+str(5*(i+1))+".txt"   
     f=open(trace,'r')
     text=f.readlines()
     word_list=[]
