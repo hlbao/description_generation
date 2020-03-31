@@ -71,10 +71,10 @@ f1=open('/users/pc/Desktop/description_generation/Perplexity/candidate.txt','r')
 
 testset=f1.read()
 testset_word_count=50        
-for i in xrange(14):
+for i in xrange(50):
     dictionary={}
-    topic.append(5*(3i+1))  #confused, but works, since i learned some other codes, this line aims to count topic                                                  
-    trace="/users/pc/Desktop/description_generation/Perplexity/model-final-"+str(5*(i+1))+".txt"   
+    topic.append(4*i)  #confused, but works, since i learned some other codes, this line aims to count topic                                                  
+    trace="/users/pc/Desktop/description_generation/Perplexity/model-final-"+str(2*i)+".txt"   
     f=open(trace,'r')
     text=f.readlines()
     word_list=[]
