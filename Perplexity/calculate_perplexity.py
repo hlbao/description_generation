@@ -89,3 +89,6 @@ for i in xrange(50):
     perplexity=f_perplexity(frequency,testset_word_count)       
     perplexity_list.append(perplexity)        
 graph_draw(topic,perplexity_list)
+
+
+#https://www.cnblogs.com/nlp-yekai/p/3816532.html
