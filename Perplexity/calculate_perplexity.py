@@ -91,4 +91,4 @@ for i in xrange(50):
 graph_draw(topic,perplexity_list)
 
 
-#https://www.cnblogs.com/nlp-yekai/p/3816532.html
+
