@@ -92,3 +92,5 @@ lda_model = gensim.models.LdaMulticore(corpus=corpus,
 coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
 coherence_lda = coherence_model_lda.get_coherence()
 print('\nCoherence Score: ', coherence_lda)
+
+
