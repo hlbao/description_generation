@@ -92,3 +92,4 @@ graph_draw(topic,perplexity_list)
 
 
 
+#https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0
