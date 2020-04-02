@@ -24,6 +24,7 @@ def sent_to_words(sentences):
 data = papers.paper_text_processed.values.tolist()
 data_words = list(sent_to_words(data))
 #print(data_words[:1])
+# see output_1.txt
 
 # Build the bigram and trigram models
 bigram = gensim.models.Phrases(data_words, min_count=5, threshold=100) # higher threshold fewer phrases.
@@ -60,7 +61,9 @@ data_words_bigrams = make_bigrams(data_words_nostops)
 nlp = spacy.load("en_core_web_sm", disable=['parser', 'ner'])
 # Do lemmatization keeping only noun, adj, vb, adv
 data_lemmatized = lemmatization(data_words_bigrams, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV'])
-print(data_lemmatized[:1])
+#print(data_lemmatized[:1])
+
+#see output_2.txt
 
 
 # Create Dictionary
@@ -71,6 +74,8 @@ texts = data_lemmatized
 corpus = [id2word.doc2bow(text) for text in texts]
 # View
 #print(corpus[:1])
+
+#see output_3.txt
 
 
 # Build LDA model
