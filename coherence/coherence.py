@@ -24,6 +24,7 @@ def sent_to_words(sentences):
 data = papers.paper_text_processed.values.tolist()
 data_words = list(sent_to_words(data))
 #print(data_words[:1])
+# print(data_words[:1][0][:100])
 # see output_1.txt
 
 # Build the bigram and trigram models
