@@ -37,7 +37,7 @@ trigram_mod = gensim.models.phrases.Phraser(trigram)
 # nltk.download('stopwords')
 
 stop_words = stopwords.words('english')
-stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
+#stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
 # Define functions for stopwords, bigrams, trigrams and lemmatization
 def remove_stopwords(texts):
     return [[word for word in simple_preprocess(str(doc)) if word not in stop_words] for doc in texts]
@@ -64,6 +64,7 @@ data_lemmatized = lemmatization(data_words_bigrams, allowed_postags=['NOUN', 'AD
 #print(data_lemmatized[:1])
 
 #see output_2.txt
+
 
 
 # Create Dictionary
