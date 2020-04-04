@@ -14,8 +14,13 @@ os.chdir('..')
 # Read data into papers
 paper = pd.read_csv('./dataset1and2/paper.csv')
 
-# sample only 1- for demonstration purposes
+# sample only 2- for demonstration purposes
 paper = paper.sample(2)
+
+
+wb = sxl.Workbook('myfile.xlsx')
+ws = wb.sheets[1]  # this gets the first sheet
+data = ws.head(100)
 
 
 def sent_to_words(sentences):
