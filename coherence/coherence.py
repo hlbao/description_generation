@@ -12,7 +12,7 @@ import sxl
 
 os.chdir('..')
 # Read data into papers
-paper = pd.read_csv('./dataset1and2/paper.csv')
+#paper = pd.read_csv('./dataset1and2/paper.csv')
 
 # sample only 2 - for demonstration purposes
 #paper = paper.sample(2)
