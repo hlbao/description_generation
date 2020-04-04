@@ -18,8 +18,8 @@ os.chdir('..')
 #paper = paper.sample(2)
 
 
-
-wb = sxl.Workbook('paper.xlsx')
+paper = pd.read_csv('./dataset1and2/paper.csv')
+wb = sxl.Workbook('paper.csv')
 ws = wb.sheets[1]  # this gets the first sheet
 paper = ws.head(2)
 
