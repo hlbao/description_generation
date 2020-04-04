@@ -8,13 +8,20 @@ from gensim.models import CoherenceModel
 from nltk.corpus import stopwords
 from gensim.utils import simple_preprocess
 import gensim.corpora as corpora
+import sxl
 
 os.chdir('..')
 # Read data into papers
 paper = pd.read_csv('./dataset1and2/paper.csv')
 
 # sample only 2 - for demonstration purposes
-paper = paper.sample(2)
+#paper = paper.sample(2)
+
+
+
+wb = sxl.Workbook('paper.xlsx')
+ws = wb.sheets[1]  # this gets the first sheet
+paper = ws.head(2)
 
 
 def sent_to_words(sentences):
