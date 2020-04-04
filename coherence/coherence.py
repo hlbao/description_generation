@@ -15,12 +15,10 @@ os.chdir('..')
 paper = pd.read_csv('./dataset1and2/paper.csv')
 
 # sample only 2- for demonstration purposes
-paper = paper.sample(2)
-
-
-wb = sxl.Workbook('myfile.xlsx')
+#paper = paper.sample(2)
+wb = sxl.Workbook('paper.csv')
 ws = wb.sheets[1]  # this gets the first sheet
-data = ws.head(100)
+data = ws.head(2)
 
 
 def sent_to_words(sentences):
