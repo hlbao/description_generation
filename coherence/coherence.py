@@ -12,22 +12,16 @@ import sxl
 
 os.chdir('..')
 # Read data into papers
-#paper = pd.read_csv('./dataset1and2/paper.csv')
-
-# sample only 2 - for demonstration purposes
-#paper = paper.sample(2)
-
-
 paper = pd.read_csv('./dataset1and2/paper.csv')
-wb = sxl.Workbook('paper.csv')
-ws = wb.sheets[1]  # this gets the first sheet
-paper = ws.head(2)
+
+# sample only 1- for demonstration purposes
+paper = paper.sample(2)
 
 
 def sent_to_words(sentences):
     for sentence in sentences:
         yield(gensim.utils.simple_preprocess(str(sentence), deacc=True))  # deacc=True removes punctuations
-data = papers.paper_text_processed.values.tolist()
+data = paper.paper_text_processed.values.tolist()
 data_words = list(sent_to_words(data))
 #print(data_words[:1])
 # print(data_words[:1][0][:100])
