@@ -103,3 +103,4 @@ coherence_lda = coherence_model_lda.get_coherence()
 print('\nCoherence Score: ', coherence_lda)
 
 
+# coherence for c_v 0.17678264682948247
