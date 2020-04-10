@@ -11,8 +11,6 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 from keras.layers import Embedding
-from sklearn.model_selection import train_test_split
-
 # load doc into memory
 def load_doc(filename):
 	# open the file as read only
