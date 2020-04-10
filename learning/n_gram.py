@@ -58,11 +58,11 @@ vocab_size = len(tokenizer.word_index) + 1
  
 # separate into input and output
 sequences = array(sequences)
-#X, y = sequences[:,:-1], sequences[:,-1]
-X = sequences[:,-1]
-y = sequences[:,-1]
+X, y = sequences[:,:-1], sequences[:,-1]
+
 
 y = to_categorical(y, num_classes=vocab_size)
+#here is 50
 seq_length = X.shape[1]
  
 # define model
