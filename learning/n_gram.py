@@ -11,7 +11,8 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 from keras.layers import Embedding
- 
+from sklearn.model_selection import train_test_split
+
 # load doc into memory
 def load_doc(filename):
 	# open the file as read only
@@ -64,6 +65,7 @@ X, y = sequences[:,:-1], sequences[:,-1]
 y = to_categorical(y, num_classes=vocab_size)
 #here is 50
 seq_length = X.shape[1]
+
  
 # define model
 #Now we need to separate input sequence into input (X) and output (y) elements.
@@ -107,7 +109,7 @@ print(model.summary())
 # compile model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 # fit model
-model.fit(X, y, batch_size=128, epochs=100)
+model.fit(X, y, batch_size=128, epochs=100, validation_split=0.1, show_accuracy=True, verbose=1)
  
 # save the model to file
 model.save('model.h5')
