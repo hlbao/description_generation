@@ -82,7 +82,7 @@ corpus = [id2word.doc2bow(text) for text in texts]
 # Build LDA model
 lda_model = gensim.models.LdaMulticore(corpus=corpus,
                                        id2word=id2word,
-                                       num_topics=10, 
+                                       num_topics=3, 
                                        random_state=100,
                                        chunksize=100,
                                        passes=10,
